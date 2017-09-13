@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { FontWesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { white } from './colors';
 
 export function isBetween (num, x, y) {
@@ -110,7 +110,7 @@ export function getMetricMetaInfo(metric) {
       getIcon() {
         return (
           <View>
-            <FontWesome
+            <FontAwesome
               name='bed'
               color={'black'}
               size={35}
@@ -142,4 +142,11 @@ export function getMetricMetaInfo(metric) {
   return typeof metric === 'undefined'
     ? info
     : info[metric]
+}
+
+
+export function getDailyReminderValue () {
+  return {
+    today: "Don't forget to log your data today!"
+  }
 }
